@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,15 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Deletar genero</h1>
-        <form action="/genero/insert" method="post">
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" class="form-control" />
-            </div>
+        <h1>Remover Gênero</h1>
+        <p>Tem certeza que deseja remover o gênero "${genero.nome}"</p>
+        <form action="/genero/delete" method="post">
+            <input type="hidden" name="id" value="${genero.id}" />
             <br />
             <a href="/genero/list" class="btn btn-primary">Voltar</a>
-            <button type="submit" class="btn btn-sucess">Excluir</button>
+            <button type="submit" class="btn btn-danger">Excluir</button>
         </form>
     </div>
 </body>

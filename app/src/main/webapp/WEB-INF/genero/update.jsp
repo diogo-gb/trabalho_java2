@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,9 +11,10 @@
     <div class="container">
         <h1>Editar genero</h1>
         <form action="/genero/update" method="post">
+            <input type="hidden" name="id" value="${genero.id}" />
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="hidden" name="nome" class="form-control" />
+                <input type="text" name="nome" class="form-control" value="${genero.nome}" />
             </div>
             <br />
             <a href="/genero/list" class="btn btn-primary">Voltar</a>
